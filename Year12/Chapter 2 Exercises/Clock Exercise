@@ -1,0 +1,4 @@
+Current_Time = int(input("What is the current time?"))
+Amount_of_time = int(input("How many hours would you like to wait?"))
+print("The time after waiting",Amount_of_time,"hours would be:")
+print((Current_Time + Amount_of_time) % 24)
