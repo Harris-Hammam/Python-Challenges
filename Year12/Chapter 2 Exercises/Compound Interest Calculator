@@ -1,0 +1,7 @@
+P = 10000
+n = 12
+r = 1.08
+t = int(input("How many years have you been earning compound interest?"))
+Final = float(P * (1 + r/n)**(n * t))
+print("You Have Earned:")
+print(Final)
