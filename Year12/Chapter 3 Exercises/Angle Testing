@@ -1,0 +1,4 @@
+import turtle
+tess = turtle.Turtle()
+tess.left(3645)
+#Tess will just spin until she reaches the desired angle
