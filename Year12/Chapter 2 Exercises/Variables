@@ -1,0 +1,11 @@
+Store = "All"
+Each = "work"
+Word = "and"
+In = "no"
+To = "play"
+A = "makes"
+Sep = "Jack"
+Er = "a"
+Ate = "dull"
+Variable = "boy"
+print (Store,Each,Word,In,To,A,Sep,Er,Ate,Variable)
