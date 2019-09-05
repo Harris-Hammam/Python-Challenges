@@ -1,0 +1,10 @@
+import turtle
+wn = turtle.Screen()
+Drunk_Pirate = turtle.Turtle()
+Random_Turns = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+Final_Angle = sum(Random_Turns)
+for i in Random_Turns:
+    turtle.left(i)
+    turtle.forward(100)
+
+print(Final_Angle)
