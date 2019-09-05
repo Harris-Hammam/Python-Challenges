@@ -1,0 +1,9 @@
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+
+for i in range(18):
+    turtle.forward(40)
+    turtle.left(20)
+#You calculate the angle it turns left by dividing 360 by the number of sides
+#In this case the number of sides is 18
