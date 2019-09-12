@@ -1,0 +1,57 @@
+Blackjack_number = [1,2,3,4,5,6,7,8,9,10,11]
+print("This is blackjack")
+print("You will be given 2 cards and you can decide whether or not to hit or stay")
+print("Attempt to get as close to 21 as you can and then the dealer will recieve 2 cards but will have to stay on soft 17")
+while True:
+    Players_Choice = input("Would you like to play?")
+    if Players_Choice == ("Yes" or "yes"):
+        print("Then lets begin")
+        import random
+        Card_1 = (random.randrange(1,11))
+        Card_2 = (random.randrange(1,11))
+        print("Your first 2 card are")
+        print(Card_1)
+        print("and")
+        print(Card_2)
+        print("Together these cards =")
+        print(Card_1 + Card_2)
+        if (Card_1 + Card_2) == 21:
+            print("You got blackjack!")
+            print("Now time for the dealer")
+        else:
+            First_Hit = input("Would you like another card?")
+            if First_Hit == ('Yes' or 'yes'):
+                Card_3 = (random.randrange(1,11))
+                print((Card_3))
+                print(("In total your cards ="))
+                print((Card_1 + Card_2 + Card_3))
+                if(Card_1 + Card_2 + Card_3) > 21:
+                    print("Aw sorry")
+                    print("You have gone bust")
+            if First_Hit == ('No' or 'no'):
+                print("Then it is now the dealers turn")
+            else:
+                Second_Hit = input("Would you like another card?")
+            if Second_Hit == ('Yes' or 'yes'):
+                Card_4 = (random.randrange(1,11))
+                print((Card_4))
+                print(("In total your cards ="))
+                print((Card_1 + Card_2 + Card_3 + Card_4))
+                if(Card_1 + Card_2 + Card_3 + Card_4) > 21:
+                    print("Aw sorry")
+                    print("You have gone bust")
+            if Second_Hit == ('No' or 'no'):
+                print("Then it is now the dealers turn")
+            else:
+                Third_Hit = input("Would you like another card?")
+            if Third_Hit == ('Yes' or 'yes'):
+                Card_5 = (random.randrange(1,11))
+                print((Card_5))
+                print(("In total your cards ="))
+                print((Card_1 + Card_2 + Card_3 + Card_4 + Card_5))
+                if(Card_1 + Card_2 + Card_3 + Card_4 + Card_5) > 21:
+                    print("Aw sorry")
+                    print("You have gone bust")
+            if Third_Hit == ('No' or 'no'):
+                print("Then it is now the dealers turn")
+
