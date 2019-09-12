@@ -1,0 +1,2 @@
+Fibonacci_Sequence = 
+Amount_of_fibonacci = input("How many elements of the fibonacci sequence would you like displayed?")
