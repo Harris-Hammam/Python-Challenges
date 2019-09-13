@@ -1,2 +1,13 @@
-Fibonacci_Sequence = 
-Amount_of_fibonacci = input("How many elements of the fibonacci sequence would you like displayed?")
+def fibonacci_sequence(n):
+   if n <= 1:  
+       return n  
+   else:  
+       return(fibonacci_sequence(n-1) + fibonacci_sequence(n-2))
+number = int(input("How many terms of the fibonacci sequence would you like to see?"))
+if number <= 0:
+   print("Plese enter a positive integer")  
+else:  
+   print("The first", number, "Terms of the Fibonacci sequence are:")
+   for i in range(number):
+       print(fibonacci_sequence(i))
+
