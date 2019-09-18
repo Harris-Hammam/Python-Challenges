@@ -1,0 +1,27 @@
+import turtle
+
+def draw_star(t, sz):
+ for i in range(5):
+    t.forward(sz)
+    t.right(144)
+
+def next_star(t, sz):
+ t.left(45)
+ t.forward(sz)
+ t.right(45)
+
+
+wn = turtle.Screen()        # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+wn.title("Alex meets a function")
+
+t = turtle.Turtle()      # Create alex
+size = 100
+for i in range(5):
+    draw_star(t, size)
+    t.penup()
+    next_star(t, 350)
+    t.right(144)
+    t.pendown()
+
+wn.mainloop()
