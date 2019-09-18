@@ -1,0 +1,28 @@
+import turtle
+
+def draw_square(t, sz):
+ for i in range(4):
+     t.forward(sz)
+     t.left(90)
+
+def next_square(t, fz):
+ for i in range(1):
+    t.penup()
+    t.forward(fz)
+    t.pendown()
+
+
+
+
+
+wn = turtle.Screen()        # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+wn.title("Alex meets a function")
+
+t = turtle.Turtle()      # Create alex
+
+for i in range(5):
+    draw_square(t, 20)
+    next_square(t, 40)
+
+wn.mainloop()
