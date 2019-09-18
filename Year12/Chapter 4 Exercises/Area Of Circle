@@ -1,0 +1,9 @@
+def area_of_circle(r):
+
+    a = 3.14 * r ** 2
+    return a         # This is new, and makes the function fruitful.
+
+# now that we have the function above, let us call it.
+radius = float(input("What is the radius?"))
+r = area_of_circle(radius)
+print("The area of your circle is", r)
