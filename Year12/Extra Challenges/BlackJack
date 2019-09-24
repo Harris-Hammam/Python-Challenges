@@ -28,8 +28,12 @@ while True:
                 if(Card_1 + Card_2 + Card_3) > 21:
                     print("Aw sorry")
                     print("You have gone bust")
+                if(Card_1 + Card_2 + Card_3) == 21:
+                    print("You got 21!")
+                    print("It is now the dealers turn")
             if First_Hit == ('No' or 'no'):
                 print("Then it is now the dealers turn")
+                break
             else:
                 Second_Hit = input("Would you like another card?")
             if Second_Hit == ('Yes' or 'yes'):
@@ -40,6 +44,10 @@ while True:
                 if(Card_1 + Card_2 + Card_3 + Card_4) > 21:
                     print("Aw sorry")
                     print("You have gone bust")
+                if(Card_1 + Card_2 + Card_3 + Card_4) == 21:
+                    print("You got 21!")
+                    print("It is now the dealers turn")
+                    break
             if Second_Hit == ('No' or 'no'):
                 print("Then it is now the dealers turn")
             else:
@@ -52,6 +60,30 @@ while True:
                 if(Card_1 + Card_2 + Card_3 + Card_4 + Card_5) > 21:
                     print("Aw sorry")
                     print("You have gone bust")
+                if(Card_1 + Card_2 + Card_3 + Card_4 + Card_5) == 21:
+                    print("You got 21!")
+                    print("It is now the dealers turn")
+                if(Card_1 + Card_2 + Card_3 + Card_4 + Card_5) < 21:
+                    print("You have 5 cards less then 21!")
+                    print("It is now the dealers turns")
+                    break
             if Third_Hit == ('No' or 'no'):
                 print("Then it is now the dealers turn")
 
+for i in range(1):
+    import random
+    Card_7 = (random.randrange(1,11))
+    Card_8 = (random.randrange(1,11))
+    print("The dealers first 2 card are")
+    print(Card_7)
+    print("and")
+    print(Card_8)
+    print("Together these cards =")
+    print(Card_7 + Card_8)
+    if (Card_7 + Card_8) == 21:
+        print("Dealer got blackjack!")
+        break
+    if (Card_7 + Card_8) >= 17:
+        break
+    if (Card_7 + Card_8) > (First_Hit or Second_Hit or Third_Hit):
+        print("Dealer Wins")
