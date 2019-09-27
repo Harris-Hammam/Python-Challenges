@@ -1,0 +1,27 @@
+s = 0
+u = 0
+v = 0
+a = 0
+t = 0
+suvat = ['s','u','v','a','t']
+value = [0,0,0,0,0]
+Equations=[s == (1/2)*(u+v) * t, v^2 == u^2 + 2*a*s, v == u + a*t, s == (1/2)*a*t**2, s == v*t - (1/2)*a*t**2 ]
+Coresponding_Letters=['A','B','C','D','E']
+
+
+
+print("Equation A is s == (1/2)*(u+v) * t ")
+print("Equation B is v^2 == u^2 + 2*a*s")
+print("Equation C is v == u + a*t ")
+print("Equation D is s == (1/2)*a*t**2")
+print("Equation E is s == v*t - (1/2)*a*t**2 ")
+which_equation = input("Which suvat equation would you like to use? A, B, C, D or E")
+for i in which_equation:
+    for j in range(len(Equations)):
+        if i.upper() == Coresponding_Letters[j]:
+            variable = input("Which variable do you not have?")
+            for f in range(3):
+                if variable == suvat[f]:
+                    missing_values = input("Please enter your 3 missing values:")
+
+
