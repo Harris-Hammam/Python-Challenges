@@ -1,0 +1,10 @@
+Numbered_days = ["0","1","2","3","4","5","6"]
+Days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+which_day = input("Input a number from 0-6 and the corresponding day will be outputted:")
+
+for j in which_day:
+    for i in range(len(Numbered_days)):
+        if j == Numbered_days[i]:
+            print(Days_of_week[i])
+         
