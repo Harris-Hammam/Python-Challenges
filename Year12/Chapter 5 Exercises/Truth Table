@@ -1,0 +1,4 @@
+p = "F"
+q = "F"
+r = "F"
+print((not (p and q)) or r)
