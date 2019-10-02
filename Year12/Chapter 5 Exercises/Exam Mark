@@ -1,0 +1,20 @@
+def gradeScores(exam_mark):
+    if exam_mark >= 75:
+        return("You are First")
+    elif exam_mark >= 70 and exam_mark < 75:
+        return("You are Upper second")
+    elif exam_mark >= 60 and exam_mark < 70:
+        return("You are second")
+    elif exam_mark >= 50 and exam_mark < 60:
+        return("You are third")
+    elif exam_mark >= 45 and exam_mark < 50:
+        return("You recieved F1 Supp")
+    elif exam_mark >= 40 and exam_mark < 45:
+        return("You recieved F2")
+    else:
+        return("You recieved F3")
+
+for i in range (3):
+    result = input("What is the exam mark you recieved?")
+    gradeScores(result)
+            
