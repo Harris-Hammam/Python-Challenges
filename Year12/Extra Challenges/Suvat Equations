@@ -7,6 +7,11 @@ suvat = ['s','u','v','a','t']
 value = [0,0,0,0,0]
 Equations=[s == (1/2)*(u+v) * t, v^2 == u^2 + 2*a*s, v == u + a*t, s == (1/2)*a*t**2, s == v*t - (1/2)*a*t**2 ]
 Coresponding_Letters=['A','B','C','D','E']
+Equation_1 = (s == (1/2)*(u+v) * t)
+Equation_2 = (v^2 == u^2 + 2*a*s)
+Equation_3 = (v == u + a*t)
+Equation_4 = (s == (1/2)*a*t**2)
+Equation_5 = (s == v*t - (1/2)*a*t**2)
 
 
 
@@ -21,7 +26,10 @@ for i in which_equation:
         if i.upper() == Coresponding_Letters[j]:
             variable = input("Which variable do you not have?")
             for f in range(3):
-                if variable == suvat[f]:
-                    missing_values = input("Please enter your 3 missing values:")
-
-
+                if variable.upper() == suvat[f]:
+                    missing_values = input("Please enter your 3 missing values")
+                    unknown = input("Value 1:")
+                    unknown2 = input("Value 2:")
+                    unknown3 = input("Value 3:")
+                    if unknown and unknown2 and unknown3 == Equations[f]:
+                        print(variable)
