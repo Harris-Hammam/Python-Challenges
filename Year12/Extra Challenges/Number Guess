@@ -1,0 +1,11 @@
+import random
+MyGuess = random.randrange(0,100)
+numberguess = int(input("Please enter a number between 1 - 99 and see if your number is the same as mine"))
+print("Your guess is", numberguess)
+if MyGuess == numberguess:
+    print("wow I can't believe you got it on your first try")
+if MyGuess > numberguess:
+        print("Your number is larger than mine")
+if MyGuess < numberguess:
+        print("Your number is smaller than mine")
+
