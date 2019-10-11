@@ -1,0 +1,3 @@
+mybin = int(input("Please enter an binary number"))
+print("The hex of your translation is:")
+print(hex(bin(mybin)))
