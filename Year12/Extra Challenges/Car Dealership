@@ -1,0 +1,27 @@
+vehicle_id_array = []
+registration_array = []
+date_of_registration_array = []
+engine_size_array = []
+purchase_price_array = []
+while True:
+    vehicle_id = int(input("Please enter the vehicle ID"))
+    vehicle_id_array.append(vehicle_id)
+    registration = int(input("Please enter the registration number"))
+    registration_array.append(registration)
+    date_of_registration = int(input("Please enter the date of registration"))
+    date_of_registration_array.append(date_of_registration)
+    engine_size = int(input("Please enter the engine size"))
+    engine_size_array.append( engine_size)
+    purchase_price = int(input("Please enter the purchase price"))
+    purchase_price_array.append(purchase_price)
+    print("vehicle ID is", vehicle_id_array)
+    print("Registration ID is", registration_array)
+    print("Date of registration is", date_of_registration_array)
+    print("Engine size is", engine_size_array)
+    print("Purchase price is", purchase_price_array)
+    another = input("Would you like to add another vehicle?")
+    if another == 'yes':
+        print("Ok then you may enter another item")
+    else:
+        print("Ok the program shall now stop")
+        break
