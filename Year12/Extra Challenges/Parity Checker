@@ -1,0 +1,14 @@
+Users_Number = input("Please enter a 7 bit binary number and we will generate a parity bit based on what type of parity you want")
+type_of_parity = input("What type of parity checking do you want?")
+if type_of_parity == "even" or "Even":
+    if(Users_Number).count("1") % 2 == 0:
+        print(Users_Number + '0')
+    else:
+        print(Users_Number + '1')
+
+if type_of_parity == "odd" or "Odd":
+    if(Users_Number).count("1") % 2 == 1:
+        print(Users_Number + '0')
+    else:
+        print(Users_Number + '1')
+
