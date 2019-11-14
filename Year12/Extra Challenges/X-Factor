@@ -1,0 +1,14 @@
+Artists = []
+Songs_for_artists = []
+for i in range (3):
+    artists = input("Please enter 10 different artists")
+    Artists.append(artists)
+    print(Artists)
+    for i in range (2):
+        songs = input("Please enter 10 songs for each artist")
+        Songs_for_artists.append(songs)
+
+import random
+print("The order for the artists in the show will be")
+artist_order = random.shuffle(Artists)
+print(artist_order)
