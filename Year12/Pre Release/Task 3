@@ -2,23 +2,34 @@ Name = input("Give the monster a name:")
 Origin = input("What is the origin of your monster?")
 Description = input("Describe the monster: ")
 print("Attack Force")
-Attack = int(input("Please enter a value for the monsters:"))
+Attack = int(input("Please enter a value for the monsters Attack:"))
 if Attack >1 or Attack <30:
     print("Magical Force")
-    Magical_Force = int(input("Please enter a value for the monsters:"))
+    Magical_Force = int(input("Please enter a value for the monsters Magical Force:"))
     if Attack >1 or Attack <30:
-    print("Magical Defence")
-    Magical_Defence = int(input("Please enter a value for the monsters:"))
-    if Attack >1 or Attack <30:
-    print("Defence")
-    Defence = int(input("Please enter a value for the monsters:"))
-    if Attack >1 or Attack <30:
-    print("Intelligence")
-    Intelligence = int(input("Please enter a value for the monsters:"))
-    if Attack >1 or Attack <30:
-    print("Health")
-    Health = int(input("Please enter a value for the monsters:"))
-    if Attack >1 or Attack <30:
-    print("Ok the monster card will now be printed")
+        print("Magical Defence")
+    Magical_Defence = int(input("Please enter a value for the monsters Magical Defence:"))
+    if Magical_Defence >1 or Magical_Defence <30:
+        print("Defence")
+    Defence = int(input("Please enter a value for the monsters Defence:"))
+    if Defence >1 or Defence <30:
+        print("Intelligence")
+    Intelligence = int(input("Please enter a value for the monsters Intelligence:"))
+    if Intelligence >1 or Intelligence <30:
+        print("Health")
+    Health = int(input("Please enter a value for the monsters Health:"))
+    if Health >1 or Health <30:
+        print("Ok the monster card will now be printed")
 else:
     print("Sorry the inputs have to be between 1 and 30")
+
+print("Name:", Name)
+print("Origin:", Origin)
+print("Description:", Description)
+print("Attack:", Attack)
+print("Magical Force:", Magical_Force)
+print("Magical Defence:", Magical_Defence)
+print("Defence", Defence)
+print("Intelligence", Intelligence)
+print("Health", Health)
+
