@@ -1,0 +1,144 @@
+import random
+ 
+class Character:
+    def __init__(self):
+        self.name = ""
+        self.attack = 0
+        self.defence = 0
+        self.__health = 0
+        self.experience = 0
+ 
+    def print_basics(self):
+        print("\nName:       ",self.name)
+        print("attack:     ",self.attack)
+        print("defence     ",self.defence)
+        print("health:     ",self.__health)
+        print("experience: ",self.experience)
+ 
+    def character_setter(self,name):
+        levels = 100
+        self.name = name
+        print("Current level points remaining:", levels)
+        attack = int(input("How many points do you want to spend on attack"))
+        self.attack = attack
+        levels = levels - attack
+        print("Current level points remaining:", levels)
+        defence = int(input("How many points do you want to spend on defence"))
+        self.defence = defence
+        levels = levels - defence
+        print("Current level points remaining:", levels)
+        health = int(input("How many points do you want to spend on health"))
+        self.__health = health
+        levels = levels - health
+        print("Current level points remaining:", levels)
+    
+    def character_level_adder(self,xp):
+      print("\nYour Character stats:")
+      self.print_me()
+      print("Current level points remaining:", xp)
+      attack = int(input("How many points do you want to spend on attack"))
+      self.attack = self.attack + attack
+      xp = xp - attack
+      print("Current level points remaining:", xp)
+      defence = int(input("How many points do you want to spend on defence"))
+      self.defence = self.defence + defence
+      xp = xp - defence
+      print("Current level points remaining:", xp)
+      health = int(input("How many points do you want to spend on health"))
+      self.__health = self.__health + health
+      xp = xp - health
+      print("Current level points remaining:", xp)
+      print("\nYour Character stats:")
+      self.print_me()
+
+    def health_getter(self):
+        return self.__health
+ 
+    def print_me(self):
+        self.print_basics()
+ 
+class wizard(Character):
+    def __init__(self):
+        Character.__init__(self) 
+        self.magic = 30
+ 
+    def print_me(self):
+        self.print_basics()
+        print("magic       ",self.magic)
+ 
+class knight(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.armour = 30
+ 
+    def print_me(self):
+        self.print_basics()
+        print("armour      ",self.armour)
+
+class enemies:
+    def __init__(self):
+        self.name = ""
+        self.attack = 0
+        self.defence = 0
+        self.__health = 0
+  
+    def level_1(self,name):
+      self.name = name
+      self.attack = 10
+      self.defence = 10
+      self.__health = 10
+
+    def level_2(self,name):
+      self.name = name
+      self.attack = 20
+      self.defence = 25
+      self.__health = 20
+
+    def level_3(self,name):
+      self.name = name
+      self.attack = 35
+      self.defence = 45
+      self.__health = 40
+
+    def level_4(self,name):
+      self.name = name
+      self.attack = 55
+      self.defence = 65
+      self.__health = 60
+
+    def level_5(self,name):
+      self.name = name
+      self.attack = 85
+      self.defence = 100
+      self.__health = 100
+
+    def print_me(self):
+      print("\n",self.name)
+      print("attack:     ",self.attack)
+      print("defence     ",self.defence)
+      print("health:     ",self.__health)
+
+caste = input("\nWould you like to be a Wizard or Knight? W or K")
+char_name = input("And what is your name?")
+ 
+if caste.upper() == "K":
+    print("The great knight is forged from the chambers of doom")
+    you = knight()
+elif caste.upper() == "W":
+    print("The wizard descends from the heavens")
+    you = wizard()
+else:
+    print("\nTyping W or K too much for you! \nClearly you plan to die...\nBasic peasant for you!")
+    you = Character()
+ 
+you.character_setter(char_name)
+you.print_me()
+print("Your journey now begins traveler")
+print("Good luck and slay all evil your way")
+
+test = enemies()
+test.level_5("papa")
+test.print_me()
+
+you.experience = 10
+you.character_level_adder(you.experience)
